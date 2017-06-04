@@ -1,0 +1,41 @@
+@import "compass";
+@import "components/colors.scss";
+@import "components/animated-logo.scss";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"; 
+@import "components/fonts/material-design-icons.scss";  
+
+
+html{ 
+	body{ 
+		text-align: center;
+		background-color: color('background','base');
+		.background{
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-image: url('../img/background.png'); 
+			background-size: 5vw;
+			opacity: 0.02;
+			z-index: -1;
+		}
+		.DCYLabs-logo{
+			height: 200px;
+			polygon{
+				fill: black;
+			}
+		}
+		.hello-world{
+			position: absolute;
+			left: 50%;
+			top:50%;
+			@include transform(translateX(-50%) translateY(-50%));
+			i.mdi{
+				margin: 15px;
+				font-size: 2em;
+			}
+		}
+	}
+}        
+
