@@ -2,8 +2,7 @@ FROM debian:jessie
 MAINTAINER Dcylabs <dcylabs@gmail.com>
 
 # Installing all build tools 
-RUN apt-get update 
-RUN apt-get install -y nodejs-legacy npm git-core ruby ruby-dev
+RUN apt-get update && apt-get install -y nodejs-legacy npm git-core ruby ruby-dev
 RUN npm install -g bower grunt-cli
 RUN gem install sass compass
 
